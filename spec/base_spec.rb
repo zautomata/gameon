@@ -127,9 +127,9 @@ module GoMaster
     opts = {:inc_by => 1, :dec_by => 1 }
 
     context :good_mayor do 
-      statment [:user, :visits, :good_page_four] do 
-	activation GameOn::Points, opts, GameOn::Points::Params[:addition] 
-	activation GameOn::Points, opts, {:remove => 3}
+      activity [:user, :visits, :good_page_four] do 
+	use GameOn::Points, opts, GameOn::Points::Params[:addition] 
+	use GameOn::Points, opts, {:remove => 3}
 	#activation GameOn::Points, opts, {:add => 1} 
       end
     end
